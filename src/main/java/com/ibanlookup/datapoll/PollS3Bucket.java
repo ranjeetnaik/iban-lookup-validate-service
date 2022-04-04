@@ -1,18 +1,20 @@
 package com.ibanlookup.datapoll;
 
+import java.io.IOException;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
 import com.amazonaws.AmazonClientException;
-import com.paf.pps.filehandler.IbanPlusHandler;
-import com.paf.pps.model.IbanDataMap;
-import com.paf.pps.model.S3CloseableObject;
+import com.ibanlookup.model.IbanDataMap;
+import com.ibanlookup.model.S3CloseableObject;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
-import java.io.IOException;
 
 /**
  * Polling the S3 bucket every minute and during startup
@@ -26,7 +28,7 @@ import java.io.IOException;
 public class PollS3Bucket {
 
     private final IbanPlusHandler ibanPlusHandler;
-    private final com.paf.pps.filepolling.IbanPlusProviderService ibanPlusProviderService;
+    private final IbanPlusProviderService ibanPlusProviderService;
     private IbanDataMap ibanDataMap = null;
 
     @PostConstruct

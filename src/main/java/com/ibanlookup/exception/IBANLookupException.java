@@ -1,6 +1,5 @@
 package com.ibanlookup.exception;
 
-import com.paf.pps.constant.ErrorCode;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

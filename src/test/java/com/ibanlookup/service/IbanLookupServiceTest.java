@@ -1,9 +1,6 @@
 package com.ibanlookup.service;
 
-import com.paf.pps.api.IbanResponse;
-import com.paf.pps.exception.IBANLookupException;
-import com.paf.pps.filepolling.PollS3Bucket;
-import com.paf.pps.service.impl.IbanLookupServiceImpl;
+
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;

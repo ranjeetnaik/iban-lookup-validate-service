@@ -4,9 +4,6 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.paf.pps.filehandler.IbanPlusHandlerUTC;
-import com.paf.pps.model.IbanDataMap;
-import com.paf.pps.model.S3CloseableObject;
 import lombok.experimental.UtilityClass;
 
 import java.io.IOException;

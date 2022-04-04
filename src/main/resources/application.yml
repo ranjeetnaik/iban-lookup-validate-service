@@ -30,7 +30,6 @@ management:
       show-details: always
 logging:
   level:
-    com.paf: info
     org.springframework.web: warn
 
 springdoc:

@@ -1,11 +1,8 @@
 package com.ibanlookup.rest;
 
 import com.ibanlookup.service.IbanLookupService;
-import com.paf.pps.TestUtil;
 import com.ibanlookup.exception.GlobalExceptionHandler;
 import com.ibanlookup.datapoll.PollS3Bucket;
-import com.paf.pps.service.IbanLookupService;
-import com.paf.pps.service.impl.IbanLookupServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
