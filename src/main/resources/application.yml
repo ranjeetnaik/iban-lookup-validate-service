@@ -1,0 +1,63 @@
+######################## SHARED ######################
+info:
+  app:
+    name: @project.artifactId@
+    owner: @application.owner@
+    sla-level: @application.slalevel@
+  build:
+    version: @project.version@
+spring:
+  profiles:
+    active: local-dev
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+management:
+  server:
+    port: 8081
+  endpoints:
+    enabled-by-default: false
+    jmx:
+      exposure:
+        exclude: "*"
+    web:
+      exposure:
+        include: "health"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+logging:
+  level:
+    com.paf: info
+    org.springframework.web: warn
+
+springdoc:
+  swagger-ui:
+    #For sorting endpoints alphabetically
+    operationsSorter: alpha
+    #For sorting tags alphabetically
+    tagsSorter: alpha
+
+--- ######################## local-dev ###################
+## This is only used to run the tests/compilation
+spring:
+  profiles: local-dev
+s3:
+  url: http://localhost:4566
+  region: eu-west-1
+  bucket-name: iban-lookup-service-localstack
+--- ######################## local-localstack ###################
+## This profile is used to do local development
+spring:
+  profiles: local-localstack
+s3:
+  url: http://localhost:4566
+  region: eu-west-1
+  bucket-name: iban-lookup-service-localstack
+management:
+  metrics:
+    export:
+      graphite:
+        enabled: false
