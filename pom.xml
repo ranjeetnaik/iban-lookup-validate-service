@@ -12,7 +12,7 @@
 	<artifactId>ibanlookup-validate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ibanlookup-validate</name>
-	<description>Spring boot project for IBAN validation and </description>
+	<description>Spring boot project for IBAN validation and lookup service</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
